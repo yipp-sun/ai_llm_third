@@ -2,7 +2,7 @@ from transformers import BertTokenizer, BertForSequenceClassification
 from transformers import pipeline
 
 # 加载模型和分词器
-model_name = r"D:\Workspace\AIProject\demo_4\trasnFormers_test\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f"
+model_name = r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f"
 model = BertForSequenceClassification.from_pretrained(model_name)
 tokenizer = BertTokenizer.from_pretrained(model_name)
 

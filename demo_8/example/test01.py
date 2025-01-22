@@ -3,9 +3,9 @@ from transformers import GPT2LMHeadModel, BertTokenizer, TextGenerationPipeline
 
 # 加载模型和分词器，该模型调用情况下AutoTokenizer, AutoModel不可用
 model = GPT2LMHeadModel.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
 tokenizer = BertTokenizer.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
 print(model)
 
 # 使用Pipeline调用模型

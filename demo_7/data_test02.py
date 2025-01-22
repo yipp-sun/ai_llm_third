@@ -3,9 +3,9 @@ from imblearn.under_sampling import RandomUnderSampler
 from imblearn.over_sampling import RandomOverSampler
 
 # 读取CSV文件
-# csv_file_path = "data/Weibo/train.csv"
-# csv_file_path = "data/Weibo/test.csv"
-csv_file_path = "data/Weibo/validation.csv"
+# csv_file_path = "D:/Workspace/llm/data/Weibo/train.csv"
+# csv_file_path = "D:/Workspace/llm/data/Weibo/test.csv"
+csv_file_path = "D:/Workspace/llm/data/Weibo/validation.csv"
 df = pd.read_csv(csv_file_path)
 
 # 定义重采样策略

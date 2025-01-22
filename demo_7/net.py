@@ -5,12 +5,12 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 加载预训练模型
 # pretrained = BertModel.from_pretrained(
-#     r"D:\Workspace\AIProject\demo_7\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f").to(
+#     r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f").to(
 #     DEVICE)
 #
 # pretrained.embeddings.position_embeddings = torch.nn.Embedding(1024, 768).to(DEVICE)
 config = BertConfig.from_pretrained(
-    r"D:\Workspace\AIProject\demo_7\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+    r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
 config.max_position_embeddings = 1024
 print(config)
 

@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, BertTokenizer
 
 # 加载字典和分词器
 token = BertTokenizer.from_pretrained(
-    r"D:\Workspace\AIProject\demo_5\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+    r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
 # print(token)
 
 sents = ["价格在这个地段属于适中, 附近有早餐店,小饭店, 比较方便,无早也无所",

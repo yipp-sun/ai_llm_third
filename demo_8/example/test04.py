@@ -4,9 +4,9 @@ from transformers import BertTokenizer, GPT2LMHeadModel, TextGenerationPipeline
 
 # 加载模型和分词器
 model = GPT2LMHeadModel.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-couplet\snapshots\91b9465fb1be617f69c6f003b0bd6e6642537bec")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-couplet\snapshots\91b9465fb1be617f69c6f003b0bd6e6642537bec")
 tokenizer = BertTokenizer.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-couplet\snapshots\91b9465fb1be617f69c6f003b0bd6e6642537bec")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-couplet\snapshots\91b9465fb1be617f69c6f003b0bd6e6642537bec")
 print(model)
 
 # 使用Pipeline调用模型

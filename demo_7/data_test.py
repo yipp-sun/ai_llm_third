@@ -1,7 +1,7 @@
 import pandas as pd
 
 # df = pd.read_csv("data/Weibo/validation.csv")
-df = pd.read_csv("data/news/train.csv")
+df = pd.read_csv("D:/Workspace/llm/data/news/train.csv")
 # 统计每个类别的数据量
 category_counts = df["label"].value_counts()
 

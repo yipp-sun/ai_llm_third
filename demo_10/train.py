@@ -10,11 +10,11 @@ dataset = MyDataset()
 
 # 加载编码器
 tokenizer = AutoTokenizer.from_pretrained(
-    'D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3')
+    'D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3')
 # 加载模型
 # /root/app/huggingface/LLM/models--uer--gpt2-chinese-cluecorpussmall/snapshots/c2c0249d8a2731f269414cc3b22dff021f8e07a3/
 model = AutoModelForCausalLM.from_pretrained(
-    'D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3')
+    'D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3')
 
 
 # 数据预处理函数

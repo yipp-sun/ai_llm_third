@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
 # 设置具体包含 config.json 的目录
 # model_dir = r"/trasnFormers_test/model/uer/gpt2-chinese-cluecorpussmall/models--uer--gpt2-chinese-cluecorpussmall/snapshots/c2c0249d8a2731f269414cc3b22dff021f8e07a3"
-model_dir = r"D:\Workspace\AIProject\demo_4\trasnFormers_test\model\uer\gpt2-chinese-cluecorpussmall\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3"
+model_dir = r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3"
 
 # 加载模型和分词器
 model = AutoModelForCausalLM.from_pretrained(model_dir)

@@ -4,7 +4,7 @@ from datasets import load_dataset,load_from_disk
 # dataset = load_dataset(path="NousResearch/hermes-function-calling-v1",split="train")
 # print(dataset)
 #加载本地磁盘数据
-dataset = load_from_disk(r"D:\Workspace\AIProject\demo_5\data\ChnSentiCorp")
+dataset = load_from_disk(r"D:\Workspace\llm\data\ChnSentiCorp")
 print(dataset)
 
 #取出测试集

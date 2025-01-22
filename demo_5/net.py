@@ -7,7 +7,7 @@ print(DEVICE)
 
 # 加载预训练模型
 pretrained = BertModel.from_pretrained(
-    r"D:\Workspace\AIProject\demo_5\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f").to(
+    r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f").to(
     DEVICE)
 print(pretrained)
 

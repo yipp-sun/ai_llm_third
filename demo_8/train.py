@@ -12,10 +12,10 @@ dataset = MyDataset()  # 创建数据集对象
 
 # 加载预训练的分词器，用于文本编码
 tokenizer = AutoTokenizer.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
 # 加载预训练的模型，用于语言模型任务，以白话文中文模型为基座
 model = AutoModelForCausalLM.from_pretrained(
-    r"D:\Workspace\llm\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
+    r"D:\Workspace\llm\model\gpt2-chinese\models--uer--gpt2-chinese-cluecorpussmall\snapshots\c2c0249d8a2731f269414cc3b22dff021f8e07a3")
 
 
 # 定义一个函数，用于将文本数据转换为模型所需的格式，文本分词编码

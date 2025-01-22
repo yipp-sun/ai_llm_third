@@ -4,12 +4,12 @@ from datasets import load_dataset, load_from_disk
 # dataset = load_dataset(path="NousResearch/hermes-function-calling-v1",split="train")
 # print(dataset)
 # 转存为CSV格式
-# dataset.to_csv(path_or_buf=r"D:\PycharmProjects\disanqi\demo_5\data\hermes-function-calling-v1.csv")
+# dataset.to_csv(path_or_buf=r"D:\Workspace\llm\data\hermes-function-calling-v1.csv")
 # 加载csv格式数据
-# dataset = load_dataset(path="csv",data_files=r"D:\PycharmProjects\disanqi\demo_5\data\hermes-function-calling-v1.csv")
+# dataset = load_dataset(path="csv",data_files=r"D:\Workspace\llm\data\hermes-function-calling-v1.csv")
 # print(dataset)
 # 加载缓存数据
-dataset = load_from_disk(r"D:\Workspace\AIProject\demo_6\data\ChnSentiCorp")
+dataset = load_from_disk(r"D:\Workspace\llm\data\ChnSentiCorp")
 print(dataset)
 #
 # test_data = dataset["train"]

@@ -2,7 +2,7 @@
 from transformers import BertTokenizer
 
 token = BertTokenizer.from_pretrained(
-    r"D:\Workspace\AIProject\demo_6\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+    r"D:\Workspace\llm\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
 
 # 编码句子
 out = token.batch_encode_plus(

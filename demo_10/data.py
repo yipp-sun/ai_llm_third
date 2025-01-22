@@ -5,7 +5,7 @@ import torch
 class MyDataset(torch.utils.data.Dataset):
 
     def __init__(self):
-        with open('data/chinese_poems.txt',encoding='utf-8') as f:
+        with open('D:/Workspace/llm/data/chinese_poems.txt',encoding='utf-8') as f:
             lines = f.readlines()
         lines = [i.strip() for i in lines]
 
