@@ -10,20 +10,21 @@ st.title("llama_index_demo")
 # 初始化模型
 @st.cache_resource
 def init_models():
+    print("0")
     embed_model = HuggingFaceEmbedding(
-      model_name="/root/public/llm/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+        model_name="D:/Workspace/llm/model/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     )
     Settings.embed_model = embed_model
 
     llm = HuggingFaceLLM(
-        model_name="/root/public/llm/Qwen/Qwen1___5-1___8B-Chat",
-        tokenizer_name="/root/public/llm/Qwen/Qwen1___5-1___8B-Chat",
+        model_name="D:/Workspace/llm/model/Qwen/Qwen1___5-1___8B-Chat",
+        tokenizer_name="D:/Workspace/llm/model/Qwen/Qwen1___5-1___8B-Chat",
         model_kwargs={"trust_remote_code": True},
         tokenizer_kwargs={"trust_remote_code": True}
     )
     Settings.llm = llm
 
-    documents = SimpleDirectoryReader("/root/public/projects/demo_22/data").load_data()
+    documents = SimpleDirectoryReader("D:/Workspace/git/ai_llm_third/demo_22/data").load_data()
 
     index = VectorStoreIndex.from_documents(documents)
 
@@ -34,20 +35,24 @@ def init_models():
 
 # 检查是否需要初始化模型
 if 'query_engine' not in st.session_state:
+    print("1")
     st.session_state['query_engine'] = init_models()
 
 
 def greet2(question):
+    print("2")
     response = st.session_state['query_engine'].query(question)
     return response
 
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
+    print("3")
     st.session_state.messages = [{"role": "assistant", "content": "你好，我是AI小聚，有什么我可以帮助你的吗？"}]
 
     # Display or clear chat messages
 for message in st.session_state.messages:
+    print("4")
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
@@ -66,12 +71,14 @@ def generate_llama_index_response(prompt_input):
 
 # User-provided prompt
 if prompt := st.chat_input():
+    print("5")
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
 
 # Gegenerate_llama_index_response last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
+    print("6")
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = generate_llama_index_response(prompt)
@@ -79,5 +86,5 @@ if st.session_state.messages[-1]["role"] != "assistant":
             placeholder.markdown(response)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
-#环境搭建：pip install streamlit
-#运行命令：streamlit run app.py
+# 环境搭建：pip install streamlit
+# 运行命令：streamlit run app.py
