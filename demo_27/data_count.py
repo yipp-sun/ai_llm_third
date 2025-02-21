@@ -8,4 +8,4 @@ for item in df["题目（含完整选项）"].values:
 for item in df["答案"].values:
     list.append(len(item))
 print(f"max_length:{max(list)}")
-# max_length:695
+# max_length:695 --> 768
