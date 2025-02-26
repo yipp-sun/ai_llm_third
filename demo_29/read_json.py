@@ -1,5 +1,6 @@
 import json
 
+
 def load_and_print_json(file_path):
     # 读取JSON文件
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -17,6 +18,7 @@ def load_and_print_json(file_path):
     formatted_json = json.dumps(data, ensure_ascii=False, indent=4)
     print(formatted_json)
 
+
 # 使用函数
-file_path = '/home/jukeai/ai_projects/rag_law/storage/docstore.json'  
+file_path = 'storage/docstore.json'
 load_and_print_json(file_path)
