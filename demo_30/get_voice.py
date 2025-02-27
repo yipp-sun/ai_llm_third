@@ -9,7 +9,7 @@ from scipy.io.wavfile import write
 class AudioCollector:
     def __init__(self, root_dir="dataset"):
         self.root_dir = Path(root_dir)
-        self.sample_rate = 16000
+        self.sample_rate = 16000  # 采集16000条数据/秒；过大，声音文件会过大；过低，信息会丢失
         self.duration = 3  # 每个样本的时长（秒）
 
         # 创建目录结构
