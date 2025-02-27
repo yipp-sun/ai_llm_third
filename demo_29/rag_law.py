@@ -11,6 +11,7 @@ from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import PromptTemplate
+from llama_index.llms.openai_like import OpenAILike
 
 QA_TEMPLATE = (
     "<|im_start|>system\n"
@@ -59,6 +60,11 @@ def init_models():
         tokenizer_kwargs={"trust_remote_code": True},
         generate_kwargs={"temperature": 0.3}
     )
+
+    # llm = OpenAILike(model="/root/public/llm/Qwen/Qwen1___5-1___8B-Chat",
+    #                  api_base="http://localhost:8000/v1",
+    #                  api_key="no-key-required"
+    #                  )
 
     Settings.embed_model = embed_model
     Settings.llm = llm
